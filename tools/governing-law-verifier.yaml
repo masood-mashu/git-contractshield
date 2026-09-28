@@ -1,0 +1,18 @@
+name: governing-law-verifier
+version: 1.0.0
+description: "Verifies that the chosen governing law jurisdiction is within the pre-approved corporate registry"
+input_schema:
+  type: object
+  properties:
+    jurisdiction:
+      type: string
+      description: "State or national jurisdiction specified in the contract"
+  required:
+    - jurisdiction
+implementation:
+  type: script
+  path: governing_law_verifier.py
+  runtime: python3
+annotations:
+  read_only: true
+  idempotent: true

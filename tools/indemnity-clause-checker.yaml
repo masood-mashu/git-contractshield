@@ -1,0 +1,18 @@
+name: indemnity-clause-checker
+version: 1.0.0
+description: "Audits indemnification language to ensure carveouts and consequential damage exclusions exist"
+input_schema:
+  type: object
+  properties:
+    clause_text:
+      type: string
+      description: "Full text of the indemnification clause"
+  required:
+    - clause_text
+implementation:
+  type: script
+  path: indemnity_clause_checker.py
+  runtime: python3
+annotations:
+  read_only: true
+  idempotent: true

@@ -1,0 +1,39 @@
+spec_version: "0.1.0"
+name: git-contractshield
+version: 1.0.0
+description: "Autonomous Commercial Contract Risk, Liability Cap & Clause Deviation Sentry Agent"
+author: "masood-mashu"
+license: "Apache-2.0"
+
+model:
+  preferred: "openai:gpt-4o"
+  fallback:
+    - "anthropic:claude-3-5-sonnet"
+    - "openai:gpt-4o-mini"
+  constraints:
+    temperature: 0.1
+    max_tokens: 4096
+
+skills:
+  - contract-liability-auditing
+  - legal-jurisdiction-verification
+
+tools:
+  - liability-cap-auditor
+  - indemnity-clause-checker
+  - governing-law-verifier
+
+runtime:
+  max_turns: 50
+  timeout: 120
+
+tags:
+  - legal
+  - contracts
+  - indemnity
+  - governance
+  - passport-challenge
+
+metadata:
+  passport_id: "aps-contractshield-01"
+  passport_category: "Legal"
