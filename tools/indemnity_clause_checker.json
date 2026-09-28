@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "indemnity_clause_checker",
+  "description": "Audits indemnification language to ensure carveouts and exclusions exist",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "clause_text": {
+        "type": "string",
+        "description": "Full text of indemnification clause"
+      }
+    },
+    "required": [
+      "clause_text"
+    ]
+  },
+  "returns": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      }
+    }
+  }
+}

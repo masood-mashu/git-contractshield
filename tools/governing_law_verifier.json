@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "governing_law_verifier",
+  "description": "Verifies that governing law is within pre-approved corporate registry",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "jurisdiction": {
+        "type": "string",
+        "description": "State or national jurisdiction specified"
+      }
+    },
+    "required": [
+      "jurisdiction"
+    ]
+  },
+  "returns": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      }
+    }
+  }
+}

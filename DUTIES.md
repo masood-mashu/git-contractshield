@@ -1,13 +1,17 @@
-# Separation of Duties for GitContractShield
+# Segregation of Duties (SOD) Policy: GitContractShield
 
-## Maker Role: LegalContractAssociate
-LegalContractAssociate who digests executed drafts, redlines, and commercial term sheets.
+This document establishes the role boundaries and segregation of duties for the GitContractShield agent.
 
-## Checker Role: AssociateGeneralCounsel
-AssociateGeneralCounsel who certifies indemnity clauses, liability risk, and compliance signoff.
+## Role Separation
 
-## Dual-Control Verification Pipeline
-1. Parse contract narrative clauses and commercial term definitions.
-2. Extract limitation of liability multipliers and evaluate against contract value.
-3. Analyze indemnification scope for uncapped liability exposures.
-4. Produce contract risk scorecards and negotiation playbook redline recommendations.
+### 1. Maker
+The Maker role is responsible for authoring proposed contract redlines, structuring commercial term sheets, and generating automated negotiation diffs.
+This role cannot approve or merge its own changes into protected legal branches.
+
+### 2. Checker
+The Checker role is responsible for reviewing, auditing, and validating incoming legal agreements, indemnity clauses, and liability caps.
+This role operates as an impartial auditor to verify compliance with enterprise risk benchmarks.
+
+### 3. Approver
+The Approver role is strictly reserved for human General Counsel and authorized corporate signatories.
+Human approval is required for all final contract executions and commercial liability overrides.
